@@ -1,0 +1,61 @@
+{
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center":["clock"],
+    "modules-right": ["cpu", "memory","pulseaudio","tray","custom/power"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+	"clock": {
+		"format": "{:%Y-%B-%d || %I:%M %p}",
+        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	},
+"cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+    },
+    "memory": {
+        "format": "  {}%",
+        "tooltip": false,
+    },
+	"tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+	"network": {
+        	"format-wifi": "  {essid}",
+        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "󰤮 Disconnected",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+        	"format-muted": "󰝟 Muted",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "~/.config/waybar/scripts/changeaudiosource.sh",
+	"on-click-right": "~/.config/waybar/scripts/mute.sh",
+        "tooltip": false,
+    },
+    "custom/power":{
+	"format": "",	
+	"on-click": "~/.config/waybar/scripts/power.sh"
+    }
+}
