@@ -1,54 +1,56 @@
 @import "tokyonight.css";
+@define-color BASE   #222526;
+@define-color TEXT   #d9a25a;
 * {
     border: none;
-    border-radius: 0;
     font-family: JetBrains Mono;
-    font-size: 13px;
-    min-height: 0;
 }
 #window{
 	background-color: @BASE;
-	margin: 5px;
-	margin-left: 2px;
-	border-radius: 5px;
+	margin: 0px;
+	margin-right: 9px;
+	font-size: 11px;
+	color: @TEXT;
 }
 window#waybar {
-    background: @base;
-    color: @TEXT;
+    background: #222526;
+    color: #dfbf8e;
 }
 
 #workspaces {
 	background-color: @BASE;
-	margin: 5px;
-	margin-left: 10px;
-	margin-right: 0px;
-	border-radius: 5px;
+	margin-left: 0px;
+	margin-right:50px;
 }
 #workspaces button {
-    padding: 5px 10px;
-    color: @TEXT_100;
+    color: @TEXT;
+    margin: 0px;
+    padding-left:9px;
+    padding-right:9px;
+    padding-top:0px;
+    padding-bottom:0px;
+    font-size: 14px;
 }
 
 #workspaces button.focused {
     color: @BASE;
-    background-color: @BLUEBERRY_100;
-    border-radius: 5px;
+    background-color: @TEXT;
+    margin: 0px;
 }
 
 #workspaces button:hover {
 	background-color: @SLATE_500;
 	color: @SILVER_500;
-	border-radius: 5px;
+	margin: 0px;
 }
 
-#custom-date, #cpu, #memory, #clock, #battery, #pulseaudio, #network, #tray  {
+#custom-wallpaper,#custom-date, #cpu, #memory, #clock, #battery, #pulseaudio, #network {
 	color: @TEXT;
-	border-radius: 5px;
-	margin-right: 2px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 0px;
-	padding: 5px 10px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 15px;
+	font-size: 12px;
 }
 
 #custom-date {
@@ -58,12 +60,8 @@ window#waybar {
 #custom-power {
 	color: @BASE_100;
 	background-color: @STRAWBERRY_700;
-	border-radius: 5px;
 	margin-right: 10px;
-	margin-top: 5px;
-	margin-bottom: 5px;
 	margin-left: 0px;
-	padding: 5px 10px;
 }
 #memory {
     	background-color: @BASE;
@@ -95,6 +93,11 @@ window#waybar {
 }
 #tray {
 	background-color: @BASE;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: @TEXT;
 }
 #pulseaudio {
     background-color: @BASE;

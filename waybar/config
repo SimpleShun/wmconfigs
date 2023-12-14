@@ -1,28 +1,35 @@
+
 {
     "position": "top",
-    "height": 30,
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-center":["clock"],
-    "modules-right": ["cpu", "memory","pulseaudio","tray","custom/power"],
+    "height": 5,
+    "modules-left": ["sway/workspaces","sway/window"],
+    "modules-center":[],
+    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+	     "6":"",
+             "urgent": "",
+             "default": ""
+         },
+	 "persistent-workspaces":{"1":[],"2":[],"3":[],"4":[],"5":[],"6":[]}
+     },
 	"clock": {
-		"format": "{:%Y-%B-%d || %I:%M %p}",
-        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": " {:%I:%M %p %Y/%b/%d }",
+        	//"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	},
+	"sway/window":{
+	"format":": {title}",
+	"max-length":40,
+	"format-alt":": {app_id}"
 	},
 "cpu": {
         "format": " {usage}%",
@@ -33,15 +40,15 @@
         "tooltip": false,
     },
 	"tray": {
-        // "icon-size": 21,
+        "icon-size": 15,
         "spacing": 10
     },
 	"network": {
         	"format-wifi": "  {essid}",
-        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-ethernet": " Connected",
         	"format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "󰤮 Disconnected",
-        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		"tooltip": false,
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
@@ -56,6 +63,11 @@
     },
     "custom/power":{
 	"format": "",	
-	"on-click": "~/.config/waybar/scripts/power.sh"
+	"on-click": "~/.config/waybar/scripts/power.sh",
+        "tooltip": false
+    },
+    "custom/wallpaper":{
+    	"format":"",
+	"on-click":"~/.config/waybar/scripts/chgwp",
     }
 }

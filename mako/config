@@ -1,14 +1,10 @@
-background-color=#24283b
-text-color=#c0caf5
-border-color=#c0caf5
-layer=overlay
-border-radius=15
-icons=0
-max-icon-size=64
-default-timeout=5000
-ignore-timeout=1
-font= JetBrains Mono 10
-on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
-
-
-
+background-color=#222526
+text-color=#d9a25a
+width=400
+height=400
+padding=10
+border-size=1
+border-radius=5
+text-alignment=center
+font=monospace 15
+border-color=#d9a25a

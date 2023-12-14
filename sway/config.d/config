@@ -1,4 +1,3 @@
-include catppuccin-mocha
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -8,14 +7,11 @@ include catppuccin-mocha
 output VGA-1 scale 0.9
 input type:keyboard xkb_numlock enabled
 for_window [app_id="pavucontrol"] floating enable
-for_window [app_id="foot"] opacity 0.7
-#for_window [app_id="firefox-esr"] opacity 0.7
 #gaps and no titlebar
 gaps inner 5
 gaps outer 5
 default_border pixel 2
 for_window [floating] default_border pixel 2
-#font pango: FontAwesome Regular 12
 ### Variables
 #
 #bindsys $mod+b exec firefox-esr
@@ -31,14 +27,17 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu wofi -show
 set $menu tofi-drun | xargs swaymsg exec --
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu wofi --show
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/simpleshun/Downloads/camille2.jpg fill
+#output * bg /home/simpleshun/Downloads/wall.jpg fill
+#exec swaybg -i /home/simpleshun/Downloads/wall.jpg -m fill 
+
 #
 # Example configuration:
 #
@@ -86,8 +85,6 @@ output * bg /home/simpleshun/Downloads/camille2.jpg fill
     bindsym $mod+d exec $menu
 
 #my applications
-    bindsym $mod+q exec firefox-esr
-    bindsym $mod+p exec dolphin
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -99,7 +96,7 @@ output * bg /home/simpleshun/Downloads/camille2.jpg fill
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -221,12 +218,12 @@ bar {
 	swaybar_command waybar
 }
 ### Borders
-client.focused          #a5adcb #a5adcb #24283b #a5adcb #a5adcb
+client.focused          #d9a25a #d9a25a #d9a25a #d9a25a #d9a25a
 client.focused_inactive #24283b #24283b #a5adcb #24283b #24283b
-client.unfocused        #24283b #24283b #a5adcb #24283b #24283b
+client.unfocused        #222526 #222526 #222526 #222526 #222526
 client.urgent           #F15D22 #F15D22 #24283b #F15D22 #F15D22
 client.placeholder      #24283b #24283b #a5adcb #24283b #24283b
-client.background       #24283b
+client.background       #d9a25a
 
 
 include /etc/sway/config.d/*
