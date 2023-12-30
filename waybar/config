@@ -1,10 +1,9 @@
-
 {
     "position": "top",
     "height": 5,
     "modules-left": ["sway/workspaces","sway/window"],
     "modules-center":[],
-    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray"],
+    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray","custom/power"],
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
@@ -63,11 +62,12 @@
     },
     "custom/power":{
 	"format": "",	
-	"on-click": "~/.config/waybar/scripts/power.sh",
+	"on-click": "wlogout -p layer-shell",
         "tooltip": false
     },
     "custom/wallpaper":{
     	"format":"",
 	"on-click":"~/.config/waybar/scripts/chgwp",
-    }
+	"tooltip": false
+    },
 }

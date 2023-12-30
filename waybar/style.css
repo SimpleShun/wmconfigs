@@ -1,6 +1,5 @@
-@import "tokyonight.css";
-@define-color BASE   #222526;
-@define-color TEXT   #d9a25a;
+@define-color BASE   black;
+@define-color TEXT   white;
 * {
     border: none;
     font-family: JetBrains Mono;
@@ -13,7 +12,7 @@
 	color: @TEXT;
 }
 window#waybar {
-    background: #222526;
+	background-color: @BASE;
     color: #dfbf8e;
 }
 
@@ -39,8 +38,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	background-color: @SLATE_500;
-	color: @SILVER_500;
+	background-color: @TEXT;
+	color: @BASE;
 	margin: 0px;
 }
 
@@ -53,15 +52,15 @@ window#waybar {
 	font-size: 12px;
 }
 
-#custom-date {
-	color: @LIME_900;
-}
 
 #custom-power {
-	color: @BASE_100;
-	background-color: @STRAWBERRY_700;
-	margin-right: 10px;
+	color: @BASE;
+	background-color: @TEXT;
+	margin-right: 5px;
 	margin-left: 0px;
+	padding-left:5px;
+	padding-right:9px;
+	border-radius: 5px;
 }
 #memory {
     	background-color: @BASE;
@@ -75,18 +74,6 @@ window#waybar {
     margin-right: 10px;
 }
 
-#battery {
-    background-color: @BASE;
-}
-
-#battery.charging {
-    background-color: @STRAWBERRY_900;
-}
-
-#battery.warning:not(.charging) {
-    background-color: @STRAWBERRY_900;
-}
-
 #network {
     background-color: @BASE;
 	border-radius: 5px 0px 0px 5px;
@@ -98,7 +85,4 @@ window#waybar {
 	margin-bottom: 0px;
 	margin-left: 0px;
 	color: @TEXT;
-}
-#pulseaudio {
-    background-color: @BASE;
 }

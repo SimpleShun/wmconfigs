@@ -1,5 +1,5 @@
-background-color=#222526
-text-color=#d9a25a
+background-color=#000000
+text-color=#ffffff
 width=400
 height=400
 padding=10
@@ -7,4 +7,4 @@ border-size=1
 border-radius=5
 text-alignment=center
 font=monospace 15
-border-color=#d9a25a
+border-color=#ffffff

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-wall="/home/simpleshun/Downloads/wall.jpg"
-wallDir = ~/Pictures/wallpaper/
-id=$(pidof swaybg)
-if [ ! -z $id ];then
-	killall swaybg
-fi
-swaybg -i $wall -m fill
+awall=$(find /home/simpleshun/Pictures/wallhaven/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+swww img -t center $awall 
+
+wal -c
+wal -e -i $awall

@@ -1,0 +1,8 @@
+#this is toml BTW
+
+[font]
+normal = { family = "JetBrains Mono", style = "Regular"} ##requires JetBrains Mono Font BTW
+bold = { family = "JetBrains Mono" , style = "Bold"}
+italic = { family = "JetBrains Mono" , style = "Italic"}
+bold_italic = { family = "JetBrains Mono" , style = "BoldItalic"}
+size = 10

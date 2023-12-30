@@ -1,17 +1,20 @@
 # Default config for sway
-#
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
 # rules
-output VGA-1 scale 0.9
+#scaled my screen
+output VGA-1 scale 0.9 
+ #num lock at start
 input type:keyboard xkb_numlock enabled
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="Alacritty"] opacity 0.8
+for_window [app_id="foot"] opacity 0.8
 #gaps and no titlebar
 gaps inner 5
 gaps outer 5
-default_border pixel 2
-for_window [floating] default_border pixel 2
+default_border pixel 1
+for_window [floating] default_border pixel 1
 ### Variables
 #
 #bindsys $mod+b exec firefox-esr
@@ -37,6 +40,7 @@ include /etc/sway/config-vars.d/*
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /home/simpleshun/Downloads/wall.jpg fill
 #exec swaybg -i /home/simpleshun/Downloads/wall.jpg -m fill 
+#i use swww for wallpaper u can still use any of the above
 
 #
 # Example configuration:
@@ -61,13 +65,9 @@ include /etc/sway/config-vars.d/*
 ### Input configuration
 #
 # Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+#Drawing tablet configs can remove if you want
+input type:tablet_tool tool_mode * absolute
+input type:tablet_pad map_to_output * 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -218,12 +218,9 @@ bar {
 	swaybar_command waybar
 }
 ### Borders
-client.focused          #d9a25a #d9a25a #d9a25a #d9a25a #d9a25a
+#if you dont like red you can change the last hex value i.e #ff000 to change the border color
+client.focused          #000000 #000000 #000000 #000000 #ff0000
 client.focused_inactive #24283b #24283b #a5adcb #24283b #24283b
-client.unfocused        #222526 #222526 #222526 #222526 #222526
-client.urgent           #F15D22 #F15D22 #24283b #F15D22 #F15D22
-client.placeholder      #24283b #24283b #a5adcb #24283b #24283b
-client.background       #d9a25a
-
+client.unfocused        #ffffff #ffffff #ffffff #ffffff #ffffff
 
 include /etc/sway/config.d/*
