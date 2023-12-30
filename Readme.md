@@ -1,4 +1,4 @@
-##MY Sway Configs
+## MY Sway Configs
 
 ---
 ***What i use***
@@ -9,6 +9,7 @@
 - tofi : for the menu 
 - JetBrains Mono Nerd font : for the glyphs
 - alacritty : Terminal 
+- Pywal : for generating colorscheme based on wallpaper (wal cmd comes from this)
 
 ---
 ![ScreenShot](20231230_19h07m02s_grim.png) 
