@@ -1,4 +1,4 @@
-##MY Sway Configs
+## MY Sway Configs
 
 ---
 ***What i use***
