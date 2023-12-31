@@ -4,20 +4,22 @@
 # Read `man 5 sway` for a complete reference.
 # rules
 #scaled my screen
-output VGA-1 scale 0.9 
+output VGA-1 scale 1.0
+
  #num lock at start
 input type:keyboard xkb_numlock enabled
 for_window [app_id="pavucontrol"] floating enable
+for_window [title="uwu"] floating enable
 for_window [app_id="Alacritty"] opacity 0.8
 for_window [app_id="foot"] opacity 0.8
+
 #gaps and no titlebar
 gaps inner 5
 gaps outer 5
-default_border pixel 1
-for_window [floating] default_border pixel 1
+default_border pixel 3
+for_window [floating] default_border pixel 3
 ### Variables
 #
-#bindsys $mod+b exec firefox-esr
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -74,7 +76,8 @@ input type:tablet_pad map_to_output *
 
 ### Key bindings
 # Basics:
-#
+#Mine
+bindsym $mod+shift+p exec grim
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -219,8 +222,8 @@ bar {
 }
 ### Borders
 #if you dont like red you can change the last hex value i.e #ff000 to change the border color
-client.focused          #000000 #000000 #000000 #000000 #ff0000
+client.focused          #000000 #000000 #000000 #000000 #ffffff
 client.focused_inactive #24283b #24283b #a5adcb #24283b #24283b
-client.unfocused        #ffffff #ffffff #ffffff #ffffff #ffffff
+client.unfocused        #ffffff #ffffff #ffffff #ffffff #000000
 
 include /etc/sway/config.d/*
