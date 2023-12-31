@@ -14,4 +14,3 @@ case $selected in
   shutdown)
     exec systemctl poweroff -i;;
 esac
-#i dont think this works i just switched to wlogout

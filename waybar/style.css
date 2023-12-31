@@ -3,55 +3,69 @@
 * {
     border: none;
     font-family: JetBrains Mono;
+    margin: 0px;
+    font-size: 11px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-left: 0px;
+    margin-right:0px;
+    margin-top: 0px;
+    margin-bottom:0px;
 }
 #window{
 	background-color: @BASE;
-	margin: 0px;
-	margin-right: 9px;
-	font-size: 11px;
 	color: @TEXT;
 }
 window#waybar {
 	background-color: @BASE;
-    color: #dfbf8e;
 }
 
 #workspaces {
 	background-color: @BASE;
-	margin-left: 0px;
-	margin-right:50px;
 }
 #workspaces button {
     color: @TEXT;
-    margin: 0px;
-    padding-left:9px;
-    padding-right:9px;
-    padding-top:0px;
-    padding-bottom:0px;
-    font-size: 14px;
+    margin-left: 1px;
+    padding-left:4px;
+    padding-right:4px;
 }
 
 #workspaces button.focused {
     color: @BASE;
     background-color: @TEXT;
-    margin: 0px;
+    margin-left: 1px;
+    padding-left:4px;
+    padding-right:4px;
 }
 
 #workspaces button:hover {
 	background-color: @TEXT;
 	color: @BASE;
-	margin: 0px;
+	margin-left: 1px;
+	padding-left:4px;
+	padding-right:4px;
 }
 
 #custom-wallpaper,#custom-date, #cpu, #memory, #clock, #battery, #pulseaudio, #network {
+	font-size: 10px;
 	color: @TEXT;
-	margin-right: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 15px;
-	font-size: 12px;
+	padding-left:4px;
+	padding-right:4px;
 }
-
+#clock{
+	margin-right:5px;
+}
+#custom-exit,#custom-lock,#custom-reboot,#custom-poweroff,#custom-exitsway
+{
+	color: @BASE;
+	background-color: @TEXT;
+	margin-right:2px;
+	padding-left:5px;
+	padding-right:9px;
+	border-radius: 5px;
+}
 
 #custom-power {
 	color: @BASE;
@@ -59,7 +73,7 @@ window#waybar {
 	margin-right: 5px;
 	margin-left: 0px;
 	padding-left:5px;
-	padding-right:9px;
+	padding-right:0px;
 	border-radius: 5px;
 }
 #memory {
@@ -71,18 +85,13 @@ window#waybar {
 
 #clock {
     background-color: @BASE;
-    margin-right: 10px;
 }
 
 #network {
     background-color: @BASE;
-	border-radius: 5px 0px 0px 5px;
 }
 #tray {
 	background-color: @BASE;
-	margin-right: 10px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
 	color: @TEXT;
+	margin-right: 5px;
 }

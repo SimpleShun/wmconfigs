@@ -2,6 +2,6 @@
 
 awall=$(find /home/simpleshun/Pictures/wallhaven/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
 swww img -t center $awall 
-
+notify-send -t 1500 "Wallpaper Updated $awall"
 wal -c
 wal -e -i $awall

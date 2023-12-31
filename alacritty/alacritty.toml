@@ -5,4 +5,4 @@ normal = { family = "JetBrains Mono", style = "Regular"} ##requires JetBrains Mo
 bold = { family = "JetBrains Mono" , style = "Bold"}
 italic = { family = "JetBrains Mono" , style = "Italic"}
 bold_italic = { family = "JetBrains Mono" , style = "BoldItalic"}
-size = 10
+size = 9

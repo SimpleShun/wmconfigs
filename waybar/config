@@ -3,10 +3,11 @@
     "height": 5,
     "modules-left": ["sway/workspaces","sway/window"],
     "modules-center":[],
-    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray","custom/power"],
+    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray","group/pwrDock"],
+
     // Modules configuration
      "sway/workspaces": {
-         "disable-scroll": true,
+         "disable-scroll": false,
          "all-outputs": true,
          "format": "{icon}",
          "format-icons": {
@@ -22,20 +23,19 @@
 	 "persistent-workspaces":{"1":[],"2":[],"3":[],"4":[],"5":[],"6":[]}
      },
 	"clock": {
-		"format": " {:%I:%M %p %Y/%b/%d }",
-        	//"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": " {:%I:%M %p %Y/%b/%d}",
 	},
 	"sway/window":{
-	"format":": {title}",
+	"format":"[ {title}]",
 	"max-length":40,
-	"format-alt":": {app_id}"
-	},
-"cpu": {
+	"format-alt":"[ {app_id}]"
+	}, "cpu": {
         "format": " {usage}%",
         "tooltip": false,
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
+	"on-click":"alacritty --title=uwu --command=htop",
         "tooltip": false,
     },
 	"tray": {
@@ -69,5 +69,43 @@
     	"format":"",
 	"on-click":"~/.config/waybar/scripts/chgwp",
 	"tooltip": false
+    },
+    "group/pwrDock":{
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false,
+    },
+    "modules":[
+	"custom/exit",
+	"custom/poweroff",
+	"custom/reboot",
+	"custom/lock",
+	"custom/exitsway",
+    ],
+    },
+    "custom/lock":{
+	"format":"",
+    	"on-click" : "swaylock",
+	"tooltip": false
+    },
+    "custom/exit":{
+	"format": "",	
+        "tooltip": false,
+    },
+    "custom/poweroff":{
+	"format": "",	
+        "tooltip": false,
+	"on-click":"systemctl poweroff",
+    },
+    "custom/reboot":{
+	"format": "",	
+        "tooltip": false,
+	"on-click":"systemctl reboot",
+    },
+    "custom/exitsway":{
+	"format": "",	
+        "tooltip": false,
+	"on-click":"sway exit",
     },
 }

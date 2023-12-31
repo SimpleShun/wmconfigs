@@ -1,10 +1,20 @@
+on-notify=exec mpv ~/.config/mako/mixkit-arabian-mystery-harp-notification-2489.wav
+anchor=top-center
+format=<b><i>%a</i></b>\n%s\n%b
+
 background-color=#000000
 text-color=#ffffff
+border-color=#ffffff
+
 width=400
 height=400
 padding=10
 border-size=1
 border-radius=5
+progress-color=over #ffffff
+
 text-alignment=center
-font=monospace 15
-border-color=#ffffff
+font=JetBrains Mono 12
+
+max-history=10
+
