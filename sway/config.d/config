@@ -221,8 +221,8 @@ bar {
 	swaybar_command waybar
 }
 ### Borders
-#if you dont like red you can change the last hex value i.e #ff000 to change the border color
-client.focused          #000000 #000000 #000000 #000000 #ffffff
+#you can change the last hex value i.e #ff000 to change the border color
+client.focused          #000000 #000000 #000000 #000000 #7aa937
 client.focused_inactive #24283b #24283b #a5adcb #24283b #24283b
 client.unfocused        #ffffff #ffffff #ffffff #ffffff #000000
 

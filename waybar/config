@@ -2,8 +2,8 @@
     "position": "top",
     "height": 5,
     "modules-left": ["sway/workspaces","sway/window"],
-    "modules-center":[],
-    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","clock","tray","group/pwrDock"],
+    "modules-center":["clock",],
+    "modules-right": ["custom/wallpaper","cpu", "memory","pulseaudio","network","tray","group/pwrDock"],
 
     // Modules configuration
      "sway/workspaces": {

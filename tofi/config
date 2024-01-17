@@ -9,24 +9,23 @@ border-width=0
 outline-width=0
 width=100%
 
-background-color=#000000
-text-color=#ffffff
+background-color=#080d11
+text-color=#7aa937
 
 text-cursor=false
-text-cursor-thinkness=5
 
 text-cursor-background=#ffffff
 selection-background-padding=5
 input-background-padding=5
 input-background=#000000
-input-color=#ffffff
+input-color=#7aa937
 
 input-background-corner-radius=5
 selection-background-corner-radius=0
 
-selection-background=#ffffff
+selection-background=#7aa937
+selection-color=#080d11
 
-selection-color=#000000
 result-spacing=15
 corner-radius=0
 min-input-width=10

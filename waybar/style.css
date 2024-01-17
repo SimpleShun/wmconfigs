@@ -1,5 +1,5 @@
-@define-color BASE   black;
-@define-color TEXT   white;
+@define-color BASE   #080d11;
+@define-color TEXT   #7aa937;
 * {
     border: none;
     font-family: JetBrains Mono;
